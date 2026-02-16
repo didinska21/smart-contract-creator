@@ -22,12 +22,70 @@ module.exports = {
     apiKey: {
       ethereum: process.env.ETHERSCAN_API_KEY,
       bnb: process.env.BSCSCAN_API_KEY,
-      arbitrumOne: process.env.ARBISCAN_API_KEY,
-      optimisticEthereum: process.env.OPTIMISM_API_KEY,
-      base: process.env.BASESCAN_API_KEY,
-      linea: process.env.LINEASCAN_API_KEY,
       polygon: process.env.POLYGONSCAN_API_KEY,
-      avalanche: process.env.SNOWTRACE_API_KEY
-    }
+      avalanche: process.env.SNOWTRACE_API_KEY,
+      linea: process.env.LINEASCAN_API_KEY,
+      base: process.env.BASESCAN_API_KEY,
+      optimisticEthereum: process.env.OPTIMISM_API_KEY,
+      arbitrumOne: process.env.ARBISCAN_API_KEY
+    },
+    customChains: [
+      {
+        network: "linea",
+        chainId: 59144,
+        urls: {
+          apiURL: "https://api.lineascan.build/api",
+          browserURL: "https://lineascan.build"
+        }
+      },
+      {
+        network: "base",
+        chainId: 8453,
+        urls: {
+          apiURL: "https://api.basescan.org/api",
+          browserURL: "https://basescan.org"
+        }
+      },
+      {
+        network: "optimism",
+        chainId: 10,
+        urls: {
+          apiURL: "https://api-optimistic.etherscan.io/api",
+          browserURL: "https://optimistic.etherscan.io"
+        }
+      },
+      {
+        network: "arbitrum",
+        chainId: 42161,
+        urls: {
+          apiURL: "https://api.arbiscan.io/api",
+          browserURL: "https://arbiscan.io"
+        }
+      },
+      {
+        network: "polygon",
+        chainId: 137,
+        urls: {
+          apiURL: "https://api.polygonscan.com/api",
+          browserURL: "https://polygonscan.com"
+        }
+      },
+      {
+        network: "bnb",
+        chainId: 56,
+        urls: {
+          apiURL: "https://api.bscscan.com/api",
+          browserURL: "https://bscscan.com"
+        }
+      },
+      {
+        network: "avalanche",
+        chainId: 43114,
+        urls: {
+          apiURL: "https://api.snowtrace.io/api",
+          browserURL: "https://snowtrace.io"
+        }
+      }
+    ]
   }
 };
