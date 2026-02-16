@@ -37,9 +37,20 @@ Other EVM chains are deploy-only by default.
 
 ## 📁 Project Structure
 
-smart-contract-creator/ │ ├── contracts/ │ └── AutoForwardPlus.sol │ ├──
-scripts/ │ └── deploy.js │ ├── chains.json ├── hardhat.config.js ├──
-deploy-log.json ├── .env.example ├── .gitignore ├── package.json └──
+smart-contract-creator/ 
+│ ├── contracts/ 
+│ └── AutoForwardPlus.sol 
+│ ├──
+scripts/ 
+│ └── deploy.js 
+│ ├── chains.json 
+├── hardhat.config.js 
+├──
+deploy-log.json 
+├── .env.example 
+├── .gitignore 
+├── package.json 
+└──
 README.md
 
 ------------------------------------------------------------------------
