@@ -14,9 +14,7 @@ const verifyWhitelist = [
   "base",
   "linea",
   "polygon",
-  "avalanche",
-  "fantom",
-  "celo"
+  "avalanche"
 ];
 
 function sleep(ms) {
