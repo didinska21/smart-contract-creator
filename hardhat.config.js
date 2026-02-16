@@ -1,9 +1,23 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-verify");
 require("dotenv").config();
+const fs = require("fs");
+
+const chains = JSON.parse(fs.readFileSync("./chains.json"));
+
+const networks = {};
+
+for (const [name, config] of Object.entries(chains)) {
+  networks[name] = {
+    url: config.rpc,
+    chainId: config.chainId,
+    accounts: [process.env.PRIVATE_KEY]
+  };
+}
 
 module.exports = {
   solidity: "0.8.20",
+  networks,
   etherscan: {
     apiKey: {
       ethereum: process.env.ETHERSCAN_API_KEY,
@@ -13,9 +27,7 @@ module.exports = {
       base: process.env.BASESCAN_API_KEY,
       linea: process.env.LINEASCAN_API_KEY,
       polygon: process.env.POLYGONSCAN_API_KEY,
-      avalanche: process.env.SNOWTRACE_API_KEY,
-      fantom: process.env.FTMSCAN_API_KEY,
-      celo: process.env.CELOSCAN_API_KEY
+      avalanche: process.env.SNOWTRACE_API_KEY
     }
   }
 };
