@@ -18,6 +18,7 @@ for (const [name, config] of Object.entries(chains)) {
 module.exports = {
   solidity: "0.8.20",
   networks,
+
   etherscan: {
     apiKey: {
       ethereum: process.env.ETHERSCAN_API_KEY,
@@ -29,12 +30,13 @@ module.exports = {
       optimisticEthereum: process.env.OPTIMISM_API_KEY,
       arbitrumOne: process.env.ARBISCAN_API_KEY
     },
+
     customChains: [
       {
         network: "linea",
         chainId: 59144,
         urls: {
-          apiURL: "https://api.lineascan.build/api",
+          apiURL: "https://api.lineascan.build/api/v2",
           browserURL: "https://lineascan.build"
         }
       },
@@ -42,7 +44,7 @@ module.exports = {
         network: "base",
         chainId: 8453,
         urls: {
-          apiURL: "https://api.basescan.org/api",
+          apiURL: "https://api.basescan.org/api/v2",
           browserURL: "https://basescan.org"
         }
       },
@@ -50,7 +52,7 @@ module.exports = {
         network: "optimism",
         chainId: 10,
         urls: {
-          apiURL: "https://api-optimistic.etherscan.io/api",
+          apiURL: "https://api-optimistic.etherscan.io/api/v2",
           browserURL: "https://optimistic.etherscan.io"
         }
       },
@@ -58,7 +60,7 @@ module.exports = {
         network: "arbitrum",
         chainId: 42161,
         urls: {
-          apiURL: "https://api.arbiscan.io/api",
+          apiURL: "https://api.arbiscan.io/api/v2",
           browserURL: "https://arbiscan.io"
         }
       },
@@ -66,7 +68,7 @@ module.exports = {
         network: "polygon",
         chainId: 137,
         urls: {
-          apiURL: "https://api.polygonscan.com/api",
+          apiURL: "https://api.polygonscan.com/api/v2",
           browserURL: "https://polygonscan.com"
         }
       },
@@ -74,7 +76,7 @@ module.exports = {
         network: "bnb",
         chainId: 56,
         urls: {
-          apiURL: "https://api.bscscan.com/api",
+          apiURL: "https://api.bscscan.com/api/v2",
           browserURL: "https://bscscan.com"
         }
       },
@@ -82,7 +84,7 @@ module.exports = {
         network: "avalanche",
         chainId: 43114,
         urls: {
-          apiURL: "https://api.snowtrace.io/api",
+          apiURL: "https://api.snowtrace.io/api/v2",
           browserURL: "https://snowtrace.io"
         }
       }
